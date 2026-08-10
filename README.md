@@ -2,59 +2,44 @@
 
 A comprehensive **Credit Risk Analytics and Loan Monitoring Dashboard** built using **Power BI and SQL** to analyze loan portfolio risk, default behavior, expected losses, and high-risk loans.
 
-The dashboard provides an executive-level overview as well as detailed credit risk and loan-level monitoring views.
-
----
-
 ## 📊 Project Overview
 
-This project analyzes a portfolio of approximately **50K loans** across multiple sectors and loan types.
+This project analyzes a loan portfolio of approximately **50K loans** across multiple sectors and loan types.
 
-The dashboard helps identify:
+The dashboard provides:
 
-- Overall portfolio default risk
-- High-risk and critical-risk loans
-- Credit score distribution
-- Default rates across risk categories
-- Default rates across loan types and sectors
-- Exposure by sector
-- Expected credit losses
+- Portfolio default-rate analysis
+- Risk-category analysis
+- Credit-score distribution
+- Sector-level risk analysis
+- Loan-type risk analysis
+- Expected-loss analysis
+- High-risk loan monitoring
 - Loan-level risk details
-- Defaulted and high-risk loans for monitoring
-
----
 
 ## 🛠️ Tools & Technologies
 
-- **Power BI** – Dashboard development and data visualization
+- **Power BI** – Dashboard development and visualization
 - **SQL** – Data analysis and risk calculations
-- **CSV** – Source loan portfolio dataset
+- **CSV** – Source dataset
 - **GitHub** – Project documentation and version control
 
----
-
-# 📈 Dashboard Pages
+# 📈 Dashboard
 
 ## 1. Executive Overview
 
-The Executive Overview provides a high-level view of the credit portfolio and its overall risk performance.
+Provides an executive-level view of overall portfolio performance and credit risk.
 
 ### Key KPIs
 
-- **Default Rate:** 13.90%
-- **Total Loans:** 50K
-- **Defaulted Loans:** 6.95K
-- **Total Expected Loss:** 1.92bn
+| Metric | Value |
+|---|---:|
+| Default Rate | 13.90% |
+| Total Loans | 50K |
+| Defaulted Loans | 6.95K |
+| Total Expected Loss | 1.92bn |
 
-### Visualizations
-
-- Default Rate by Risk Category
-- Portfolio Risk Distribution
-- Default Rate by Sector
-- Exposure by Sector
-- Expected Loss by Sector
-
-### Dashboard Preview
+### Dashboard
 
 ![Executive Overview](SQL/executive-overview.png)
 
@@ -62,28 +47,28 @@ The Executive Overview provides a high-level view of the credit portfolio and it
 
 ## 2. Credit Risk Analysis
 
-The Risk Analysis page provides deeper insights into credit quality, probability of default, loss given default, exposure at default, and loan-level risk patterns.
+Analyzes portfolio credit quality, risk segmentation, expected losses, and loan-level risk patterns.
 
 ### Key KPIs
 
-- **Average Credit Score:** 714.98
-- **Average LGD:** 54.65%
-- **Average PD:** 2.25%
-- **Total EAD:** 164.93bn
+| Metric | Value |
+|---|---:|
+| Average Credit Score | 714.98 |
+| Average LGD | 54.65% |
+| Average PD | 2.25% |
+| Total EAD | 164.93bn |
 
-### Visualizations
+### Analysis Includes
 
 - Risk Decile vs Default Rate
 - Credit Score Distribution
 - Expected Loss by Loan Type
 - Default Rate by Loan Type
 - Risk Category × Loan Type analysis
-- Risk Category filters
-- Loan Type filters
-- Sector filters
-- Defaulted loan filter
+- Sector analysis
+- Interactive risk filters
 
-### Dashboard Preview
+### Dashboard
 
 ![Risk Analysis](SQL/risk-analysis.png)
 
@@ -91,79 +76,88 @@ The Risk Analysis page provides deeper insights into credit quality, probability
 
 ## 3. Loan Monitoring
 
-The Loan Monitoring page focuses on identifying and monitoring high-risk and critical-risk loans at the individual loan level.
+Provides loan-level monitoring of **High Risk** and **Critical Risk** portfolios.
 
-### Key Features
+### Monitoring Features
 
-- High-Risk Loan Watchlist
-- Loan-Level Risk Details
-- Loan ID tracking
-- Sector classification
-- Loan type classification
-- Risk category
-- Credit score
-- Annual Probability of Default (PD)
+- Loan ID
+- Sector
+- Loan Type
+- Risk Category
+- Credit Score
+- Probability of Default (PD)
 - Loss Given Default (LGD)
 - Exposure at Default (EAD)
 - Expected Loss
-- Default status
+- Default Status
 
-Interactive filters allow users to analyze loans by:
+Interactive filters allow analysis by:
 
 - Sector
 - Loan Type
 - Risk Category
 - Default Status
 
-### Dashboard Preview
+### Dashboard
 
 ![Loan Monitoring](SQL/loan-monitoring.png)
 
 ---
 
-# 🔍 Key Risk Insights
+# 🔍 Key Insights
 
-The analysis highlights several important portfolio risk patterns:
+### Risk Categories
 
-### Risk Category
-
-Critical and high-risk loans show substantially higher default rates compared with low-risk loans.
+Critical Risk and High Risk segments show significantly higher default rates than lower-risk categories.
 
 ### Risk Deciles
 
-Default rates decrease significantly as risk decile increases, indicating a strong relationship between portfolio risk segmentation and observed defaults.
+Default rates decline substantially across increasing risk deciles, demonstrating a strong relationship between risk segmentation and observed default behavior.
 
-### Loan Type
+### Loan Types
 
-Loan types exhibit different default rates and expected-loss profiles, allowing comparison of credit risk across lending products.
+Different loan types have different default-rate and expected-loss profiles, allowing comparison of credit risk across lending products.
 
-### Sector Risk
+### Sectors
 
-Default rates and portfolio exposure vary across sectors, helping identify sectors that require closer risk monitoring.
+Sector-level analysis highlights differences in default rates, exposure, and expected losses across the portfolio.
 
 ### Expected Loss
 
-Expected loss analysis helps identify loan types and sectors contributing the most to potential portfolio losses.
+Expected-loss analysis helps identify loan types and sectors contributing significantly to potential portfolio losses.
 
 ---
 
 # 🧮 SQL Analysis
 
-SQL was used to perform portfolio-level and loan-level credit risk analysis.
+SQL was used for portfolio-level and loan-level credit risk analysis.
 
-The SQL analysis includes:
+The analysis includes:
 
-- Loan portfolio analysis
-- Default rate calculations
-- Risk category classification
-- Loan type analysis
+- Default-rate calculations
+- Risk-category analysis
+- Loan-type analysis
 - Sector-level analysis
-- Expected loss calculations
-- Credit risk segmentation
+- Expected-loss calculations
+- Credit-risk segmentation
 - High-risk loan identification
-- Defaulted loan analysis
+- Defaulted-loan analysis
 
-SQL scripts are available in:
+SQL script:
+
+`SQL/credit_risk_analysis.sql`
+
+---
+
+# 📂 Repository Structure
 
 ```text
-SQL/credit_risk_analysis.sql
+credit-risk-analytics/
+│
+├── README.md
+│
+└── SQL/
+    ├── credit_risk_analysis.sql
+    ├── executive-overview.png
+    ├── risk-analysis.png
+    └── loan-monitoring.png
